@@ -37,3 +37,6 @@ $ npm run test:cov
 ```
 nest g resource
 ```
+
+Add mongoose
+npm install @nestjs/mongoose mongoose

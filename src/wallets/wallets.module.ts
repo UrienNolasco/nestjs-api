@@ -12,6 +12,7 @@ import { WalletAsset, WalletAssetSchema } from './entities/wallet-asset.entity';
       { name: WalletAsset.name, schema: WalletAssetSchema },
       ]),
   ],
+  
   controllers: [WalletsController],
   providers: [WalletsService],
 })

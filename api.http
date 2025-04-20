@@ -10,6 +10,18 @@ Content-Type: application/json
     "image": "AMZN.png"
 }
 
+### 
+
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+    "name": "Mercado Livre",
+    "symbol": "ML3",
+    "price": 500,
+    "image": "MELI.png"
+}
+
 ###
 POST http://localhost:3000/assets
 Content-Type: application/json

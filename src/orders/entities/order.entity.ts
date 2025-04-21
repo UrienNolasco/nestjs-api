@@ -40,7 +40,7 @@ export class Order {
   asset: AssetDocument | string;
 
   @Prop()
-  types:OrderType
+  type:OrderType
 
   @Prop()
   status: OrderStatus

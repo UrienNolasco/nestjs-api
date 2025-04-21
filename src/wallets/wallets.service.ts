@@ -4,7 +4,6 @@ import { InjectConnection, InjectModel } from '@nestjs/mongoose';
 import { Wallet } from './entities/wallet.entity';
 import mongoose, { Model } from 'mongoose';
 import { WalletAsset } from './entities/wallet-asset.entity';
-import { AssetPresenter } from '../assets/asset.presenter'; // ajuste o caminho se necessário
 
 @Injectable()
 export class WalletsService {
@@ -23,24 +22,13 @@ export class WalletsService {
     return this.WalletSchema.find();
   }
 
-  async findOne(id: string) {
-    const wallet = await this.WalletSchema.findById(id).populate([
+  findOne(id: string) {
+    return this.WalletSchema.findById(id).populate([
       {
         path: 'assets',
         populate: ['asset'],
       },
     ]);
-
-    if (!wallet) return null;
-
-    const walletObj = wallet.toObject();
-
-    walletObj.assets = walletObj.assets.map((walletAsset) => ({
-      ...walletAsset,
-      asset: new AssetPresenter(walletAsset.asset).toJSON(),
-    }));
-
-    return walletObj;
   }
 
   async createWalletAsset(data: {

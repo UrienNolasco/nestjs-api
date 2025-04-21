@@ -5,8 +5,8 @@ Content-Type: application/json
 
 {
     "name": "Amazon",
-    "symbol": "A1",
-    "price": 1000,
+    "symbol": "AMZN",
+    "price": 3200,
     "image": "AMZN.png"
 }
 
@@ -16,10 +16,43 @@ POST http://localhost:3000/assets
 Content-Type: application/json
 
 {
+    "name": "NVIDIA",
+    "symbol": "NVDA",
+    "price": 450,
+    "image": "NVDA.png"
+}
+
+### 
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
     "name": "Mercado Livre",
-    "symbol": "ML3",
-    "price": 500,
+    "symbol": "MELI",
+    "price": 1200,
     "image": "MELI.png"
+}
+
+### 
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+    "name": "Meta",
+    "symbol": "META",
+    "price": 280,
+    "image": "META.png"
+}
+
+### 
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+    "name": "Salesforce",
+    "symbol": "CRM",
+    "price": 210,
+    "image": "CRM.png"
 }
 
 ###
@@ -30,9 +63,30 @@ Content-Type: application/json
     "name": "Google",
     "symbol": "GOL3",
     "price": 3000,
-    "image": "https://i.imgur.com/XJsV2e1.png"
+    "image": "GOOGL.png"
 }
 
+###
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+    "name": "Coca-Cola",
+    "symbol": "KO",
+    "price": 37,
+    "image": "KO.png"
+}
+
+###
+POST http://localhost:3000/assets
+Content-Type: application/json
+
+{
+    "name": "Mc-Donalds",
+    "symbol": "MCD",
+    "price": 37,
+    "image": "MCD.png"
+}
 ###
 @assetId = {{ createAsset.response.body.id }}
 ###
@@ -75,4 +129,4 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3000/orders?walletId={{walletId}}
+GET http://localhost:3000/orders?walletId=791531d0-9f71-4d7d-a3f5-9388040481f6
